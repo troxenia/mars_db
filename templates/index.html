@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Works log</h2>
+{% for item in jobs%}
+<div class="col-md6 border rounded">
+    <h2>Action #{{loop.index}}</h2>
+    <div>
+        {{item.job}}
+    </div>
+    <div>
+        {{item.team_leader}}
+    </div>
+    <div>
+        {{item.work_size}}
+    </div>
+    <div>
+        {{item.collaborators}}
+    </div>
+    <div>
+        {{item.is_finished}}
+    </div>
+</div>
+{% endfor %}
+{% endblock %}
