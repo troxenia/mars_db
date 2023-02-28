@@ -10,3 +10,11 @@ span.navbar-brand {
 h2 {
     text-align: center;
 }
+
+td {
+    background-color: #E6E6FA;
+}
+
+th {
+    background-color: #D3D3D3;
+}
