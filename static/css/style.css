@@ -18,3 +18,11 @@ td {
 th {
     background-color: #D3D3D3;
 }
+
+.container {
+    padding-bottom: 50px;
+}
+
+.btn-container {
+    padding-top: 20px;
+}

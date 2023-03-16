@@ -11,7 +11,7 @@ class RegisterForm(FlaskForm):
     name = StringField('Имя пользователя', validators=[DataRequired()])
     age = IntegerField('Возраст', validators=[DataRequired()])
     position = StringField('Позиция', validators=[DataRequired()])
-    specialty = StringField('Специальность', validators=[DataRequired()])
+    speciality = StringField('Специальность', validators=[DataRequired()])
     address = StringField('Адрес', validators=[DataRequired()])
     submit = SubmitField('Войти')
 
@@ -24,5 +24,17 @@ class LoginForm(FlaskForm):
 
 
 class JobsForm(FlaskForm):
-    title = StringField('Заголовок', validators=[DataRequired()])
-    submit = SubmitField('Применить')
+    job = StringField('Job title', validators=[DataRequired()])
+    team_leader = IntegerField('Team leader id', validators=[DataRequired()])
+    work_size = IntegerField('Work size', validators=[DataRequired()])
+    collaborators = StringField('Collaborators', validators=[DataRequired()])
+    is_finished = BooleanField('Is job finished?')
+    submit = SubmitField('Submit')
+
+
+class DepartmentForm(FlaskForm):
+    title = StringField('Department title', validators=[DataRequired()])
+    chief = IntegerField('Chief id', validators=[DataRequired()])
+    members = StringField('Members', validators=[DataRequired()])
+    email = StringField('Department email', validators=[DataRequired()])
+    submit = SubmitField('Submit')

@@ -22,4 +22,4 @@ class Jobs(SqlAlchemyBase, UserMixin, SerializerMixin):
     users = orm.relationship("User")
 
     def __repr__(self):
-        return
+        return f'<Job> {self.id}'
